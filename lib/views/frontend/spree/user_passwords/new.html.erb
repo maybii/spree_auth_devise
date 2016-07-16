@@ -10,7 +10,7 @@
       <%= form_for Spree::User.new, :as => :spree_user, :url => spree.reset_password_path do |f| %>
         <p>
           <%#= f.label :email, Spree.t(:email) %>
-          <%= f.email_field :email, :class => "form-control" %>
+          <%= f.email_field :email, :class => "form-control", placeholder: Spree.t(:email) %>
         </p>
         <p>
           <%= f.submit Spree.t(:reset_password), :class => 'btn btn-lg btn-success btn-block' %>
