@@ -23,6 +23,10 @@ module Spree
       User.admin.count > 0
     end
 
+    def remember_me
+      true
+    end
+
     def admin?
       has_spree_role?('admin')
     end

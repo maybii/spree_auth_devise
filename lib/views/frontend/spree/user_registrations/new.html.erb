@@ -1,6 +1,6 @@
 <% @body_id = 'signup' %>
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @user } %>
-<div class="col-md-6 col-md-offset-3">
+<div id="user-register-form" class="col-md-6 col-md-offset-3">
   <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title text-center"><%= Spree.t(:new_customer) %></h3>
@@ -12,7 +12,7 @@
               <div class="inline">
                 <%= f.submit Spree.t(:create), :class => 'btn btn-lg btn-success btn-block' %>
               </div>
-              <div class="inline pull-right">
+              <div class="inline pull-right go_to_login">
                 <%= Spree.t(:already_exist_account) %>
                 <%= link_to Spree.t(:login_as_existing), spree.login_path %>
               </div>
